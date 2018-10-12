@@ -1,0 +1,16 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@ page pageEncoding="UTF-8" %>
+
+
+<%
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    Date fecha = new Date(System.currentTimeMillis());
+%>
+<header>
+    <img src="<%= request.getContextPath() %>/assets/images/escudo.jpg" alt=""/>
+    <h3><a href="<%= request.getContextPath() %>">MARKHAM COLLEGE - <%= sdf.format(fecha) %></a></h3>
+</header>
+<nav>
+    <%@include file="partials/menu.jspf" %>
+</nav>
